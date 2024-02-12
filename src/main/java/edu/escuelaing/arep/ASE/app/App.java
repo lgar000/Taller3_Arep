@@ -17,6 +17,12 @@ public class App
             response.setType("text/htm");
             return response.getResponse();
         });
+
+        MySpark.get("/prueba",((request, response) -> {
+            response.setType("application/json");
+            return "{\"prueba\": \"Hola\"}";
+        }));
+
         server.run(args);
 
     }

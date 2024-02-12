@@ -32,23 +32,40 @@ mvn package
 
 
 
-## Pruebas
+## Pruebas en diferentes sistemas operativos
+
+### Windows
 
 Para probar el funcionamiento, una vez tenga descargado el proyecto y ejecutado correctamente proceda a ingresar a un navergador, donde debera ingresar http://localhost:35000/archivoSolicitado.extension, donde las extensiones pueden ser (js, html, css, png, jpg). Los archivos a solicitar se encuentra dentro del proyecto.
 
 ### Prueba html
 
-![html]()
+![html](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaHtml.png)
 
 ### Prueba js
 
-![js]()
+![js](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaJs.png)
 
 ### Prueba css
 
-![css]()
+![css](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaCss.png)
 
 
+### Debian GNU/Linux
+
+Para realizar la prueba en otro sistema operativo se hizó uso de la maquina virtual kali linux. Se cambio el puerto a 17001, ya que el 35000 no se encontraba libre. Para probar el funcionamiento en le navegador debera ingresar http://localhost:17001/archivoSolicitado.extension, donde las extensiones pueden ser (js, html, css, png, jpg). Los archivos a solicitar se encuentra dentro del proyecto.
+
+### Prueba html
+
+![htmlKaliLinux](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaHtmlKaliLinux.png)
+
+### Prueba js
+
+![jsKaliLinux](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaJsKaliLinux.png)
+
+### Prueba css
+
+![cssKaliLinux](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaCssKaliLinux.png)
 
 ## Diseño
 

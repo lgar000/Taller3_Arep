@@ -77,6 +77,9 @@ Vamos a simular el funcionamiento del servicio Get, para lo que hacemos uso del 
  
 ![salidaGet](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/respuestaEjemploGet.png)
 
+Para el post vamos a hacer uso de Postman, donde enviamos un endpoint a http://localhost:35000?keyPrueba=valuePrueba, en el cual va la llave y el valor. Aqué vemos que nos envia el código 200 ok.
+
+![salidaPost](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/ejemploPost.png)
 
 ## Diseño
 

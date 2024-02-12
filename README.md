@@ -53,7 +53,7 @@ Para probar el funcionamiento, una vez tenga descargado el proyecto y ejecutado 
 
 ### Debian GNU/Linux
 
-Para realizar la prueba en otro sistema operativo, se hizó uso de la maquina virtual kali linux. Se cambio el puerto a 17001, ya que el 35000 no se encontraba libre. Para probar el funcionamiento en le navegador debera ingresar http://localhost:17001/archivoSolicitado.extension, donde las extensiones pueden ser (js, html, css). Los archivos a solicitar se encuentra dentro del proyecto.
+Para realizar la prueba en otro sistema operativo, se hizó uso de la maquina virtual kali linux. Se cambio el puerto a 17001, ya que el 35000 no se encontraba disponible. Para probar el funcionamiento en le navegador debera ingresar http://localhost:17001/archivoSolicitado.extension, donde las extensiones pueden ser (js, html, css). Los archivos a solicitar se encuentra dentro del proyecto.
 
 ### Prueba html
 

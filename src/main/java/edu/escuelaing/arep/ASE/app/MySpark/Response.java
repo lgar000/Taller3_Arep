@@ -1,5 +1,9 @@
 package edu.escuelaing.arep.ASE.app.MySpark;
 
+/**
+ * Clase que representa una respuesta HTTP, que cuenta con información como la ruta,
+ *  el tipo de contenido y el cuerpo de la respuesta.
+ */
 
 public class Response {
 

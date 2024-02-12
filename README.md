@@ -67,12 +67,21 @@ Para realizar la prueba en otro sistema operativo, se hizó uso de la maquina vi
 
 ![cssKaliLinux](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/pruebaCssKaliLinux.png)
 
+## Ejemplo
+
+Vamos a simular el funcionamiento del servicio Get, para lo que hacemos uso del método get que se encuentra en MySpark y establecemos el tipo de contenido de la respuesta como "application/json".
+
+![get](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/ejemplo.png)
+
+ Donde el recurso prueba devuelve la cadena JSON {"prueba": "Hola"}.
+ 
+![salidaGet](https://github.com/lgar000/Taller3_Arep/blob/main/Imagenes/respuestaEjemploGet.png)
+
+
 ## Diseño
 
 Se busca simular un framework web co un funcionamiento parecido a Spark. Este maneja solicitudes GET y POST. Para esto se creo una interfaz Root con un método “handle” que toma una solicitud y una respuesta, y devuelve una cadena. Esta interfaz permite que defina sus propios manejadores de rutas al implementarla. En la clase MySpark, se encuentran definidos los metodos GET y POST.
 El cliente es el navegador que hace solicitudes http de tipo Get, mediante estas se solicitan archivos estáticos que pueden ser  HTML, JavaScript, CSS. Estas solicitudes son respondidas por un servidor, que escucha el puerto 35000 y gestiona las peticiones para mostrar el contenido de los archivos.
-
-## Ejemplo
 
 
 ## Construido Con

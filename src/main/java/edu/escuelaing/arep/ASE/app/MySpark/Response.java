@@ -46,17 +46,6 @@ public class Response {
         return getHeader() + getBody();
     }
 
-    public void assignFileExtension(String file) {
-        String extension = file.split("\\.")[1];
-        if (extension.equalsIgnoreCase("html")) {
-            type = "text/html";
-        }else if (extension.equalsIgnoreCase("js")) {
-            type = "application/javascript";
-        } else if (extension.equalsIgnoreCase("css")) {
-            type = "text/css";
-        } else if (extension.equalsIgnoreCase("png") || extension.equalsIgnoreCase("jpg")) {
-            type = "image/png";
-        }
-    }
+
 
 }

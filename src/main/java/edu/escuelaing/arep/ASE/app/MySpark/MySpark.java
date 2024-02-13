@@ -3,6 +3,7 @@ package edu.escuelaing.arep.ASE.app.MySpark;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,8 +20,8 @@ public class MySpark {
     public static void get(String path, Route route) {
         Request request = new Request();
         Response response = new Response();
-        String s = route.handle(request, response);
-        response.setBody(s);
+        String body = route.handle(request, response);
+        response.setBody(body);
         response.setPath(path);
         cache.put(path, response);
     }
@@ -29,22 +30,28 @@ public class MySpark {
      *Lee un archivo desde la ruta proporcionada, configura una respuesta y la almacena en caché.
      * @param path ruta del archivo
      */
-    public static void setCache(String path) {
+    public static void setCache(String path)  {
+        String body="";
         Response response = new Response();
-        byte[] file;
+        byte[] file=new byte[0];
         String type;
         try{
             file = Files.readAllBytes(Paths.get("target/classes/public" + path));
         }catch (IOException e){
             throw new RuntimeException(e);
         }
-        type = path.split("\\.")[1];
-        String body = new String(file);
-        response.setBody(body);
-        if(Objects.equals(type, "js")){
-            type = "javascript";
+        if(path.endsWith("js") || path.endsWith("html") || path.endsWith("css")){
+            type = path.split("\\.")[1];
+            body = new String(file);
+            if(Objects.equals(type, "js")){
+                type = "javascript";
+            }
+            response.setType("text/" + type);
+        } else if (path.endsWith("png")) {
+            body= Base64.getEncoder().encodeToString(file);
+            response.setType("image/png");
         }
-        response.setType("text/" + type);
+        response.setBody(body);
         cache.put(path, response);
     }
 

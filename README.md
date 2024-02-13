@@ -84,7 +84,9 @@ Para el post vamos a hacer uso de Postman, donde enviamos un endpoint a http://l
 ## Diseño
 
 Se busca simular un framework web co un funcionamiento parecido a Spark. Este maneja solicitudes GET y POST. Para esto se creo una interfaz Root con un método “handle” que toma una solicitud y una respuesta, y devuelve una cadena. Esta interfaz permite que defina sus propios manejadores de rutas al implementarla. En la clase MySpark, se encuentran definidos los metodos GET, POST y setCache. En este se cuenta con un HashMap que es el que almacena las respuestas asociadas con la ruta. El método get recibe una ruta y un objeto Route.Crea una solicitud (Request) y una respuesta (Response) e invoca el método handle de la interfaz Route para procesar la solicitud y obtiene la respuesta como una cadena (String). Por otra parte, el método Post recibe una ruta y una cadena de consulta, crea una respuesta (Response) y extrae el par clave-valor de la cadena de consulta y construye una cadena JSON simple, donde el tipo de contenido es"application/json".
+
 El servidor web es el que valida sí la petición es post o get y en consecuencia usa los métodos de MySpark. Este servidor está diseñado bajo el patro singleton, donde solamente existe una instancia del servidor.
+
 El cliente es el navegador que hace solicitudes http de tipo Get, mediante estas se solicitan archivos estáticos que pueden ser  HTML, JavaScript, CSS. Estas solicitudes son respondidas por un servidor, que escucha el puerto 35000 y gestiona las peticiones para mostrar el contenido de los archivos.
 
 
